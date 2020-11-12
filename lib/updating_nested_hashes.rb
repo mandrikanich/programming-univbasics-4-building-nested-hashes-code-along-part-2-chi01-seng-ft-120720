@@ -3,7 +3,7 @@ def update_status
       :montague => {
          :patriarch => {name: "Lord Montague", age: "53"},
          :matriarch => {name: "Lady Montague", age: "54"},
-         :hero => {name: "Romeo", age: "15", status: "alive"},
+         :hero => {name: "Romeo", age: "15", status: "dead"},
          :hero_friends => [
             {name: "Benvolio", age: "17", attitude: "worried"},
             {name: "Mercutio", age: "18", attitude: "hot-headed"}
@@ -12,7 +12,7 @@ def update_status
       :capulet => {
          :patriarch => {name: "Lord Capulet", age: "50"},
          :matriarch => {name: "Lady Capulet", age: "51"},
-         :heroine => {name: "Juliet", age: "15", status: "alive"},
+         :heroine => {name: "Juliet", age: "15", status: "dead"},
          :heroine_friends => [
          {name: "Steven", age: "30", attitude: "confused"},
          {name: "Nurse", age: "44", attitude: "worried"}
@@ -52,19 +52,12 @@ def add_characters
       }
    }
 
-   # Write code below that does the following programmatically:
-   #
-   # - Add an additional :additional_characters key to epic_tragedy and assign it an array as its value
-   # - Add two hashes to this array, both with a :name key.
-   #   - The first hash should have the :name key set to "Prince Escalus" 
-   #   - The second hash should have the :name key set to "Apothecary" 
-   # Code your solution here:
 
 
+   epic_tragedy[:additional_characters] = []
+   epic_tragedy[:additional_characters][0] = { name: 'Prince Escalus' }
+   epic_tragedy[:additional_characters][1] = { name: 'Apothecary' }
 
-
-
-
-   # After your code, the following line will return the altered hash
+   
    epic_tragedy
 end
